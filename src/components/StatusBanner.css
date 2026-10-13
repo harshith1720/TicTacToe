@@ -1,0 +1,56 @@
+/* ================================================================
+   StatusBanner.css
+   ================================================================ */
+.status-banner {
+  width: 100%;
+  text-align: center;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-card);
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  transition: all var(--transition-mid);
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.status-banner__icon {
+  font-style: normal;
+}
+
+/* ── Modifier states ───────────────────────────────────────────── */
+.status-banner--turn-x {
+  color: var(--color-x);
+  border-color: rgba(233, 69, 96, 0.35);
+}
+
+.status-banner--turn-o {
+  color: var(--color-o);
+  border-color: rgba(0, 212, 255, 0.35);
+}
+
+.status-banner--win-x {
+  color: var(--color-x);
+  border-color: var(--color-x);
+  box-shadow: 0 0 24px var(--color-x-glow);
+  font-size: 1.1rem;
+}
+
+.status-banner--win-o {
+  color: var(--color-o);
+  border-color: var(--color-o);
+  box-shadow: 0 0 24px var(--color-o-glow);
+  font-size: 1.1rem;
+}
+
+.status-banner--draw {
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+  box-shadow: 0 0 24px var(--color-gold-glow);
+  font-size: 1.1rem;
+}

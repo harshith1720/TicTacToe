@@ -1,0 +1,51 @@
+/* ================================================================
+   App.css  —  App shell layout
+   ================================================================ */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  width: 100%;
+  max-width: 520px;
+}
+
+/* ── Header ────────────────────────────────────────────────────── */
+.app__header {
+  text-align: center;
+}
+
+.app__title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  background: linear-gradient(135deg, var(--color-x) 0%, #ff9a5c 45%, var(--color-o) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.app__subtitle {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ── Footer ────────────────────────────────────────────────────── */
+.app__footer {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+/* ── Responsive ────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .app__title { font-size: 2.2rem; }
+}
+@media (max-width: 360px) {
+  .app__title { font-size: 1.8rem; }
+}

@@ -1,0 +1,87 @@
+/* ================================================================
+   Scoreboard.css
+   ================================================================ */
+.scoreboard {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* ── Score card ────────────────────────────────────────────────── */
+.scoreboard__card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-card);
+  border-radius: var(--radius-md);
+  padding: 1.2rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  transition:
+    transform      var(--transition-mid),
+    border-color   var(--transition-mid),
+    box-shadow     var(--transition-mid);
+}
+
+.scoreboard__card--x { }
+.scoreboard__card--o { }
+
+.scoreboard__card--active-x {
+  border-color: var(--color-x);
+  box-shadow: 0 0 20px var(--color-x-glow), inset 0 0 20px rgba(233, 69, 96, 0.05);
+  transform: translateY(-2px);
+}
+
+.scoreboard__card--active-o {
+  border-color: var(--color-o);
+  box-shadow: 0 0 20px var(--color-o-glow), inset 0 0 20px rgba(0, 212, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+.scoreboard__symbol {
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.scoreboard__card--x .scoreboard__symbol { color: var(--color-x); }
+.scoreboard__card--o .scoreboard__symbol { color: var(--color-o); }
+
+.scoreboard__label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.scoreboard__value {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-text-primary);
+}
+
+/* ── Draws divider ─────────────────────────────────────────────── */
+.scoreboard__divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.scoreboard__draws-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+}
+
+.scoreboard__draws-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+}

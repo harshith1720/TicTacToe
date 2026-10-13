@@ -1,0 +1,60 @@
+/* ================================================================
+   Controls.css
+   ================================================================ */
+.controls {
+  display: flex;
+  gap: 0.9rem;
+  width: 100%;
+}
+
+.controls__btn {
+  flex: 1;
+  padding: 0.85rem 1.4rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-base);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background  var(--transition-fast),
+    transform   var(--transition-fast),
+    box-shadow  var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.controls__btn:active {
+  transform: scale(0.96);
+}
+
+/* ── Primary (New Game) ────────────────────────────────────────── */
+.controls__btn--primary {
+  background: linear-gradient(135deg, var(--color-x) 0%, #c93554 100%);
+  color: #fff;
+  box-shadow: 0 4px 18px var(--color-x-glow);
+}
+
+.controls__btn--primary:hover {
+  background: linear-gradient(135deg, #f05372 0%, var(--color-x) 100%);
+  box-shadow: 0 6px 24px var(--color-x-glow);
+  transform: translateY(-2px);
+}
+
+/* ── Secondary (Reset) ─────────────────────────────────────────── */
+.controls__btn--secondary {
+  background: var(--color-bg-card);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border-card);
+}
+
+.controls__btn--secondary:hover {
+  background: var(--color-bg-card-hover);
+  color: var(--color-text-primary);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}

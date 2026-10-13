@@ -1,0 +1,32 @@
+/* ================================================================
+   Board.css  —  3×3 CSS grid wrapper
+   ================================================================ */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 110px);
+  grid-template-rows:    repeat(3, 110px);
+  gap: 12px;
+  padding: 1.5rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-card);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 480px) {
+  .board {
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows:    repeat(3, 90px);
+    gap: 8px;
+    padding: 1.1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .board {
+    grid-template-columns: repeat(3, 78px);
+    grid-template-rows:    repeat(3, 78px);
+    gap: 7px;
+    padding: 0.9rem;
+  }
+}
